@@ -1,7 +1,7 @@
 function MyAccount() {
     return (
       <h1 className="bg-orange-500">
-        Hello world!
+        My Account
       </h1>
     )
   }
