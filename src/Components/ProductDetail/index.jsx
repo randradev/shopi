@@ -5,13 +5,12 @@ import { ShoppingCartContext } from '../../Context'
 
 const ProductDetail = () => {
     const context = useContext(ShoppingCartContext)
-    console.log('PRODUCT TO SHOW: ', context.productToShow)
 
     return(
         <aside
-            className={`${context.isProductDetailOpen ? 'flex' : 'hidden'} product-detail flex flex-col fixed right-0 rounded-lg border-2 border-black bg-gray-200`}
+            className={`${context.isProductDetailOpen ? 'flex' : 'hidden'} product-detail flex flex-col fixed right-0 rounded-lg border-2 border-black bg-gray-200 overflow-auto`}
             >
-            <div className='flex justify-between items-center p-6'>
+            <div className='flex justify-between items-center p-6 '>
                 <h2 className='font-medium text-xl'>Detail</h2>
                 <div>
                     <XMarkIcon
