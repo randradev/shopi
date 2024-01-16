@@ -14,9 +14,7 @@ const OrderCard = (props) => {
             alt={title}
           />
         </figure>
-        {/* <div className='overflow-hidden'> */}
           <p className='text-sm font-light' style={{ maxWidth: '150px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{title}</p>
-        {/* </div> */}
       </div>
 
       <div className='flex'>
