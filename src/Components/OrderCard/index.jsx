@@ -22,7 +22,7 @@ const OrderCard = (props) => {
       </div>
 
       <div className='flex'>
-        <p className='text-lg font-medium'>{price}</p>
+        <p className='text-lg font-medium'>${price}</p>
         {renderXMarkIcon}
       </div>
 
