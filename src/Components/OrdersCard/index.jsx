@@ -7,7 +7,7 @@ const OrdersCard = (props) => {
         <div className='flex justify-between items-center border border-black rounded-lg p-4 w-80 mb-4'>
             <div className='flex justify-between w-full'>
                 <p className='flex flex-col'>
-                    <span className='font-light'>01.02.23</span>
+                    <span className='font-light'>Date: 01.02.23</span>
                     <span className='font-light'>{totalProducts} articles</span>
                 </p>
                 <p className='flex items-center gap-2'>
