@@ -69,14 +69,19 @@ export const ShoppingCartProvider = ({children}) => {
     }
 
     useEffect(() => {
-        if(searchByTitle && !searchByCategory) setFilteredItems(filterBy('BY_TITLE', items, searchByTitle, searchByCategory))
-        if(!searchByTitle && searchByCategory) setFilteredItems(filterBy('BY_CATEGORY', items, searchByTitle, searchByCategory))
-        if(!searchByTitle && !searchByCategory) setFilteredItems(filterBy(null, items, searchByTitle, searchByCategory))
-        if(searchByTitle && searchByCategory) setFilteredItems(filterBy('BY_TITLE_AND_CATEGORY', items, searchByTitle, searchByCategory))
-        return () => {
-            setSearchByTitle(null)
+        let filteredItemsResult = items;
+    
+        if (searchByTitle) {
+            filteredItemsResult = filteredItemsByTitle(filteredItemsResult, searchByTitle);
         }
-    }, [items, searchByTitle, searchByCategory])
+    
+        if (searchByCategory) {
+            filteredItemsResult = filteredItemsByCategory(filteredItemsResult, searchByCategory);
+        }
+    
+        setFilteredItems(filteredItemsResult);
+    }, [items, searchByTitle, searchByCategory]);
+    
     
     return(
         <ShoppingCartContext.Provider value={{
