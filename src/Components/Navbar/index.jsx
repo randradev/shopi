@@ -7,19 +7,32 @@ const Navbar = () => {
     const context = useContext(ShoppingCartContext)
     const activeStyle = 'underline underline-offset-4'
 
+    const handleCategoryClick = (category) => {
+        if (category === 'all') {
+            // Restablecer la búsqueda por categoría a null para mostrar todos los productos
+            context.setSearchByCategory(null);
+        } else {
+            // Establecer la búsqueda por categoría según la categoría seleccionada
+            context.setSearchByCategory(category);
+        }
+    };
+
     return(
         <nav className="flex justify-between items-center fixed z-10 w-full py-5 px-8 top-0 text-sm font-light">
             <ul className="flex items-center gap-3">
                 <li className="font-semibold text-lg">
-                    <NavLink to='/'>
+                    <NavLink
+                        to='/'
+                        onClick={() => handleCategoryClick('all')} >
                         Shopi
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink
+                <NavLink
                         to='/'
+                        onClick={() => handleCategoryClick('all')} // Manejar clic en 'All'
                         className={({ isActive }) =>
-                        isActive ? activeStyle : undefined
+                            isActive ? activeStyle : undefined
                         }>
                         All
                     </NavLink>
@@ -64,15 +77,6 @@ const Navbar = () => {
                         Women's Clothing
                     </NavLink>
                 </li>
-                {/* <li>
-                    <NavLink
-                        to='/others'
-                        className={({ isActive }) =>
-                        isActive ? activeStyle : undefined
-                        }>
-                        Others
-                    </NavLink>
-                </li> */}
             </ul>
 
             <ul className="flex items-center gap-3">
