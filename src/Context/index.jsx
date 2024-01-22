@@ -47,26 +47,32 @@ export const ShoppingCartProvider = ({children}) => {
     }
 
     const filteredItemsByCategory = (items, searchByCategory) => {
-        return items?.filter(item => item.category.toLowerCase().includes(searchByCategory.toLowerCase()))
+        return items?.filter(item => {
+            const itemCategory = item.category.toLowerCase();
+            const searchCategory = searchByCategory.toLowerCase();
+    
+            // Verificar si categoría del elemento comienza con la categoría de búsqueda: solucionar coincidencia men's - women's
+            return itemCategory.startsWith(searchCategory);
+        });
     }
 
-    const filterBy = (searchType, items, searchByTitle, searchByCategory) => {
-        if (searchType === 'BY_TITLE') {
-            return filteredItemsByTitle(items, searchByTitle)
-        }
+    // const filterBy = (searchType, items, searchByTitle, searchByCategory) => {
+    //     if (searchType === 'BY_TITLE') {
+    //         return filteredItemsByTitle(items, searchByTitle)
+    //     }
 
-        if (searchType === 'BY_CATEGORY') {
-            return filteredItemsByCategory(items, searchByCategory)
-        }
+    //     if (searchType === 'BY_CATEGORY') {
+    //         return filteredItemsByCategory(items, searchByCategory)
+    //     }
 
-        if (searchType === 'BY_TITLE_AND_CATEGORY') {
-            return filteredItemsByCategory(items, searchByCategory).filter(item => item.title.toLowerCase().includes(searchByTitle.toLowerCase()))
-        }
+    //     if (searchType === 'BY_TITLE_AND_CATEGORY') {
+    //         return filteredItemsByCategory(items, searchByCategory).filter(item => item.title.toLowerCase().includes(searchByTitle.toLowerCase()))
+    //     }
 
-        if (!searchType) {
-            return items
-        }
-    }
+    //     if (!searchType) {
+    //         return items
+    //     }
+    // }
 
     useEffect(() => {
         let filteredItemsResult = items;
