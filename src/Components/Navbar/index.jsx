@@ -28,6 +28,7 @@ const Navbar = () => {
 
     return (
         <nav className="flex justify-between items-center fixed z-10 w-full py-5 px-8 top-0 text-sm font-light">
+            
             {/* Botón Hamburguesa para dispositivos móviles */}
             <button className="lg:hidden text-black" onClick={toggleMenu}>
                 {isMenuOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
