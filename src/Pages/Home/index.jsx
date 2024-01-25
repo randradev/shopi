@@ -11,8 +11,8 @@ function Home() {
 
     return (
         <Layout>
-          <div className='flex items-center justify-center relative w-80 mb-4'>
-            <h1 className='font-medium text-xl'>Exclusive Products</h1>
+          <div className='flex items-center justify-center relative w-80 mb-8'>
+            <h1 className='font-medium text-xl mt-6'>Exclusive Products</h1>
           </div>
           <input
             type='text'
