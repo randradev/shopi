@@ -58,7 +58,7 @@ const Navbar = () => {
                         Shopi
                     </NavLink>
                 </li>
-                <li>
+                <li className='hover:text-gray-500 ease-in-out duration-300'>
                     <NavLink
                         to='/'
                         onClick={() => handleCategoryClick('all')}
@@ -68,7 +68,7 @@ const Navbar = () => {
                         All
                     </NavLink>
                 </li>
-                <li>
+                <li className='hover:text-gray-500 ease-in-out duration-300'>
                     <NavLink
                         to='/mens-clothing'
                         onClick={() => handleCategoryClick("men's clothing")}
@@ -78,7 +78,7 @@ const Navbar = () => {
                         Men's Clothing
                     </NavLink>
                 </li>
-                <li>
+                <li className='hover:text-gray-500 ease-in-out duration-300'>
                     <NavLink
                         to='/womens-clothing'
                         onClick={() => handleCategoryClick("women's clothing")}
@@ -88,7 +88,7 @@ const Navbar = () => {
                         Women's Clothing
                     </NavLink>
                 </li>
-                <li>
+                <li className='hover:text-gray-500 ease-in-out duration-300'>
                     <NavLink
                         to='/jewelery'
                         onClick={() => handleCategoryClick('jewelery')}
@@ -98,7 +98,7 @@ const Navbar = () => {
                         Jewelery
                     </NavLink>
                 </li>
-                <li>
+                <li className='hover:text-gray-500 ease-in-out duration-300'>
                     <NavLink
                         to='/electronics'
                         onClick={() => handleCategoryClick('electronics')}
@@ -112,7 +112,7 @@ const Navbar = () => {
 
             {/* Menú para escritorio */}
             <ul className="lg:flex hidden items-center gap-3">
-                <li>
+                <li className='hover:text-gray-500 ease-in-out duration-300'>
                     <NavLink
                         to='my-orders'
                         className= {({ isActive }) =>
