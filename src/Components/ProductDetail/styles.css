@@ -3,3 +3,13 @@
     height: calc(100vh - 68px);
     top: 68px
 }
+
+.overlay {
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10; /* Asegúrate de que la superposición esté sobre todo */
+  }

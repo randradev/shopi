@@ -27,7 +27,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="flex justify-between items-center fixed z-10 w-full py-5 px-8 top-0 text-sm font-light">
+        <nav className="flex justify-between items-center fixed z-10 w-full py-5 px-8 top-0 text-sm font-light bg-white shadow-lg ">
             
             {/* Botón Hamburguesa para dispositivos móviles */}
             <button className="lg:hidden text-black" onClick={toggleMenu}>
@@ -50,7 +50,7 @@ const Navbar = () => {
             </div>
 
             {/* Menú Colapsado para dispositivos móviles */}
-            <ul className={`lg:flex ${isMenuOpen ? 'flex flex-col absolute left-0 top-16 bg-white pl-4' : 'hidden'} lg:flex-row items-start gap-3`}>
+            <ul className={`lg:flex ${isMenuOpen ? 'flex flex-col absolute left-0 top-16 bg-white pl-8 pr-8 pb-4 shadow-lg rounded-lg' : 'hidden'} lg:flex-row items-start gap-3`}>
             <li className="font-semibold text-lg">
                     <NavLink
                         to='/'
