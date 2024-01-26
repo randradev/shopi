@@ -3,7 +3,6 @@ import Layout from "../../Components/Layout";
 import Card from "../../Components/Card";
 import ProductDetail from "../../Components/ProductDetail";
 import { ShoppingCartContext } from "../../Context";
-import Skeleton from 'react-loading-skeleton';
 
 function Home() {
 
@@ -30,15 +29,14 @@ function Home() {
           ) : (
             // Skeleton loader
             <div className='grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full max-w-screen-lg'>
-              {Array.from({ length: 12 }, (_, index) => (
-                <div key={index} className='bg-gray-200 p-4 rounded-lg'>
-                  <Skeleton height={20} className='mb-2' style={{ width: '75%', display: 'block' }} />
-                  <Skeleton height={20} className='mb-1' style={{ width: '50%', display: 'block' }} />
-                  <Skeleton height={20} style={{ width: '80%', display: 'block' }} />
+              {Array.from({ length: 8 }, (_, index) => (
+                <div key={index} className='bg-gradient-to-br from-gray-200 to-gray-300 p-4 rounded-lg animate-gradient'>
+                  <div className="h-56 rounded-lg overflow-hidden relative">
+                    <div className="h-full w-full bg-gradient-to-br from-gray-200 to-gray-300 animate-bg-gradient" />
+                  </div>
                 </div>
               ))}
             </div>
-
           )}
           <ProductDetail />
         </Layout>
