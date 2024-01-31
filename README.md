@@ -4,6 +4,8 @@ Shopi es una aplicación web de e-commerce desarrollada con ReactJS, diseñada p
 
 Esta Web App fue desarrollada en el contexto del curso de React.js con Vite.js y TailwindCSS de Platzi, y utiliza Fake Store API para obtener datos simulados de productos (https://fakestoreapi.com/).
 
+Visita la aplicación aquí: https://65ba6c63996c4af8efd5a3df--merry-klepon-1fa5e4.netlify.app/ 
+
 ## Características Destacadas
 
 - Explora una amplia variedad de productos.
