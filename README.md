@@ -1,3 +1,6 @@
+![Esta captura de pantalla muestra la interfaz del home de la aplicación, donde los usuarios pueden ver todos los productos, filtrarlos por nombre y categoría, acceder a los detalles de cada producto y agregarlos al carrito de compras.
+](https://drive.google.com/uc?id=1DgEOfwD6MA7nSC7-n0MujymLajN8ob0N)
+
 # Shopi
 
 Shopi es una aplicación web de e-commerce desarrollada con ReactJS, diseñada para brindar una experiencia de compra en línea intuitiva y agradable.
@@ -12,7 +15,6 @@ Visita la aplicación aquí: https://65ba6c63996c4af8efd5a3df--merry-klepon-1fa5
 - Filtra productos por categoría.
 - Agrega productos al carrito de compras.
 - Visualiza detalles de productos.
-- Realiza pedidos y sigue el estado de tus compras.
 
 ## Tecnología Utilizada
 
